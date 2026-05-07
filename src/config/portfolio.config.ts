@@ -85,7 +85,7 @@ export const repoDisplayNames: Record<string, string> = {
 // 🔗 Demo 링크 재정의 (null → Demo 버튼 숨김)
 // ============================================================
 export const repoHomepageOverrides: Record<string, string | null> = {
-  'tjrqh/CalMinder': null,
+  'tjrqh/CalMinder': 'https://tjrqh.github.io/CalMinder/',
 };
 
 // ============================================================
