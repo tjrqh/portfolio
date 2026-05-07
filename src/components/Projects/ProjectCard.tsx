@@ -1,5 +1,5 @@
 import type { RepoWithReadme } from '../../types';
-import { repoDisplayNames } from '../../config/portfolio.config';
+import { repoDisplayNames, repoHomepageOverrides } from '../../config/portfolio.config';
 import styles from './ProjectCard.module.css';
 
 const LANG_COLORS: Record<string, string> = {
@@ -27,6 +27,9 @@ interface Props {
 
 export default function ProjectCard({ repo, index, onReadmeClick }: Props) {
   const displayName = repoDisplayNames[repo.full_name] ?? repo.name;
+  const homepage = repo.full_name in repoHomepageOverrides
+    ? repoHomepageOverrides[repo.full_name]
+    : repo.homepage;
   const langColor = repo.language ? (LANG_COLORS[repo.language] ?? '#8B949E') : null;
   const updatedAt = new Date(repo.updated_at).toLocaleDateString('ko-KR', {
     year: 'numeric', month: 'long',
@@ -88,9 +91,9 @@ export default function ProjectCard({ repo, index, onReadmeClick }: Props) {
           <button className={styles.readmeBtn} onClick={onReadmeClick}>
             README
           </button>
-          {repo.homepage && (
+          {homepage && (
             <a
-              href={repo.homepage}
+              href={homepage}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.demoBtn}

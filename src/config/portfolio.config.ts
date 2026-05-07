@@ -82,6 +82,13 @@ export const repoDisplayNames: Record<string, string> = {
 };
 
 // ============================================================
+// 🔗 Demo 링크 재정의 (null → Demo 버튼 숨김)
+// ============================================================
+export const repoHomepageOverrides: Record<string, string | null> = {
+  'tjrqh/CalMinder': null,
+};
+
+// ============================================================
 // 🔑 GitHub API Token (선택 - Rate Limit 해제용)
 // ============================================================
 // GitHub API는 인증 없이 시간당 60회 요청 제한이 있습니다.
