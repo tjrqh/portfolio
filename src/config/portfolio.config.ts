@@ -13,14 +13,14 @@ import type { PersonalInfo, SkillCategory } from '../types';
 // 👤 개인 정보
 // ============================================================
 export const personalInfo: PersonalInfo = {
-  name: 'MUI',
+  name: '김보석',
   githubUsername: 'tjrqh',
   tagline: '코드로 문제를 해결하는 개발자',
   description:
     '안녕하세요. 새로운 문제를 발견하고 코드로 해결하는 것을 즐기는 개발자입니다.\n사용자 경험과 코드 품질 모두를 중요하게 생각하며, 꾸준히 성장하는 것을 추구합니다.',
 
   // 아래 항목은 선택사항입니다. 비워두면 표시되지 않습니다.
-  email: undefined,       // 예: 'your@email.com'
+  email: 'asdww9964@knou.ac.kr',       // 예: 'your@email.com'
   blog: undefined,        // 예: 'https://your-blog.com'
   linkedIn: undefined,    // 예: 'https://linkedin.com/in/yourname'
 };
