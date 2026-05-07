@@ -71,7 +71,7 @@ export default function About() {
                 <pre className={styles.json}>{JSON.stringify({
                   name: personalInfo.name,
                   github: `@${personalInfo.githubUsername}`,
-                  focus: ['Clean Code', 'UX', 'Growth'],
+                  focus: ['문제 해결', '사용자 경험', 'AI 활용'],
                   status: 'open to work 🟢',
                 }, null, 2)}</pre>
               </div>
