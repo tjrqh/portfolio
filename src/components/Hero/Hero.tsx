@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 
 const TYPING_STRINGS = [
   personalInfo.tagline,
-  'Clean Code를 지향합니다',
+  'AI와 함께 더 나은 제품을 만듭니다',
   '새로운 기술을 배우는 것을 좋아합니다',
 ];
 
