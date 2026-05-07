@@ -15,7 +15,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className={styles.link}
           >
-            {personalInfo.name}
+            {personalInfo.nickname}
           </a>
           <span className={styles.mono}> · {year}</span>
         </p>

@@ -26,6 +26,7 @@ export interface RepoWithReadme extends GitHubRepo {
 // ===================================
 export interface PersonalInfo {
   name: string;
+  nickname?: string;
   githubUsername: string;
   tagline: string;
   description: string;
