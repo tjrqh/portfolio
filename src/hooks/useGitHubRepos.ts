@@ -107,18 +107,18 @@ export function useGitHubRepos() {
   }, []);
 
   // README는 개별 카드에서 필요할 때 로드 (lazy)
-  const loadReadme = async (repoName: string) => {
+  const loadReadme = async (repoFullName: string) => {
     setRepos((prev) =>
       prev.map((r) =>
-        r.name === repoName ? { ...r, readmeLoading: true, readmeError: false } : r
+        r.full_name === repoFullName ? { ...r, readmeLoading: true, readmeError: false } : r
       )
     );
 
-    const readme = await fetchReadme(repoName);
+    const readme = await fetchReadme(repoFullName);
 
     setRepos((prev) =>
       prev.map((r) =>
-        r.name === repoName
+        r.full_name === repoFullName
           ? { ...r, readme, readmeLoading: false, readmeError: readme === null }
           : r
       )

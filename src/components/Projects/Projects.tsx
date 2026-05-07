@@ -24,12 +24,12 @@ export default function Projects() {
   const handleReadmeClick = async (repo: RepoWithReadme) => {
     setSelectedRepo(repo);
     if (!repo.readme && !repo.readmeLoading) {
-      await loadReadme(repo.name);
+      await loadReadme(repo.full_name);
     }
   };
 
   // selectedRepo가 변경될 때 최신 상태 반영
-  const currentSelected = repos.find((r) => r.name === selectedRepo?.name) ?? selectedRepo;
+  const currentSelected = repos.find((r) => r.full_name === selectedRepo?.full_name) ?? selectedRepo;
 
   return (
     <>
