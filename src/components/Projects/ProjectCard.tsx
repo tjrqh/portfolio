@@ -1,4 +1,5 @@
 import type { RepoWithReadme } from '../../types';
+import { repoDisplayNames } from '../../config/portfolio.config';
 import styles from './ProjectCard.module.css';
 
 const LANG_COLORS: Record<string, string> = {
@@ -25,6 +26,7 @@ interface Props {
 }
 
 export default function ProjectCard({ repo, index, onReadmeClick }: Props) {
+  const displayName = repoDisplayNames[repo.full_name] ?? repo.name;
   const langColor = repo.language ? (LANG_COLORS[repo.language] ?? '#8B949E') : null;
   const updatedAt = new Date(repo.updated_at).toLocaleDateString('ko-KR', {
     year: 'numeric', month: 'long',
@@ -39,7 +41,7 @@ export default function ProjectCard({ repo, index, onReadmeClick }: Props) {
       <div className={styles.top}>
         <div className={styles.titleRow}>
           <span className={styles.folderIcon}>⌂</span>
-          <h3 className={styles.name}>{repo.name}</h3>
+          <h3 className={styles.name}>{displayName}</h3>
         </div>
         <a
           href={repo.html_url}
