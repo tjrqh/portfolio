@@ -34,10 +34,10 @@ export const personalInfo: PersonalInfo = {
 // ============================================================
 export const featuredRepos: string[] = [
   'maru',
-  'KOSTAeatTogether/FE',
+  'KOSTAeatTogether/.github',
   'JobHub',
   'canvas-drawing',
-  'kosta-web',
+  'CalMinder',
 ];
 
 // ============================================================
