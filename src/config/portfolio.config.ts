@@ -78,6 +78,7 @@ export const skills: SkillCategory[] = [
 export const repoDisplayNames: Record<string, string> = {
   'KOSTAeatTogether/.github': 'eatTogether',
   'lucky-biky/maru': 'maru',
+  'concert-ticketing/concert-ticketing-be': 'concert-ticketing'
 };
 
 // ============================================================
