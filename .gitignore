@@ -6,6 +6,7 @@ node_modules
 # Build output
 dist
 dist-ssr
+*.local
 
 # Environment variables (절대 커밋 금지!)
 .env
@@ -16,18 +17,25 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
+# OS
+.DS_Store
+Thumbs.db
+
 # Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Claude Code 로컬 설정 (개인 환경 설정, 커밋 금지)
+.claude/
