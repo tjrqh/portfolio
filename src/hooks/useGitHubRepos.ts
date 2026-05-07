@@ -17,10 +17,19 @@ function getHeaders(): HeadersInit {
 // ============================================================
 // 레포 목록 + 메타정보 페치
 // ============================================================
-async function fetchRepo(repoName: string): Promise<GitHubRepo | null> {
+function resolveOwnerRepo(entry: string): { owner: string; repo: string } {
+  if (entry.includes('/')) {
+    const [owner, repo] = entry.split('/');
+    return { owner, repo };
+  }
+  return { owner: personalInfo.githubUsername, repo: entry };
+}
+
+async function fetchRepo(entry: string): Promise<GitHubRepo | null> {
+  const { owner, repo } = resolveOwnerRepo(entry);
   try {
     const res = await fetch(
-      `${BASE_URL}/repos/${personalInfo.githubUsername}/${repoName}`,
+      `${BASE_URL}/repos/${owner}/${repo}`,
       { headers: getHeaders() }
     );
     if (!res.ok) return null;
@@ -34,9 +43,10 @@ async function fetchRepo(repoName: string): Promise<GitHubRepo | null> {
 // README 내용 페치 (Base64 디코딩)
 // ============================================================
 export async function fetchReadme(repoName: string): Promise<string | null> {
+  const { owner, repo: resolvedRepo } = resolveOwnerRepo(repoName);
   try {
     const res = await fetch(
-      `${BASE_URL}/repos/${personalInfo.githubUsername}/${repoName}/readme`,
+      `${BASE_URL}/repos/${owner}/${resolvedRepo}/readme`,
       { headers: getHeaders() }
     );
     if (!res.ok) return null;

@@ -29,15 +29,13 @@ export const personalInfo: PersonalInfo = {
 // ============================================================
 // 📦 GitHub 프로젝트 레포 목록
 // ============================================================
-// 새 프로젝트를 추가할 때는 레포 이름만 여기에 추가하면 됩니다.
-// README와 메타정보는 GitHub API에서 자동으로 불러옵니다.
+// 개인 레포: 'repo-name'
+// Organization 레포: 'org-name/repo-name'
 // ============================================================
 export const featuredRepos: string[] = [
   'JobHub',
-  '311',
-  'kosta',
-  'doodle',
-  'Algorithm_Study',
+  'canvas-drawing',
+  'kosta-web',
 ];
 
 // ============================================================
@@ -54,9 +52,9 @@ export const skills: SkillCategory[] = [
     skills: ['React', 'TypeScript', 'HTML', 'CSS'],
   },
   {
-    category: 'Backend',
+    category: 'Language',
     icon: '⚙️',
-    skills: ['Node.js'],
+    skills: ['C#', 'C++', 'Java', 'Python'],
   },
   {
     category: 'Tools',
