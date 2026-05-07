@@ -33,10 +33,11 @@ export const personalInfo: PersonalInfo = {
 // README와 메타정보는 GitHub API에서 자동으로 불러옵니다.
 // ============================================================
 export const featuredRepos: string[] = [
-  'ticketing',
-  // 새 프로젝트 추가 예시:
-  // 'my-new-project',
-  // 'another-project',
+  'JobHub',
+  '311',
+  'kosta',
+  'doodle',
+  'Algorithm_Study',
 ];
 
 // ============================================================
