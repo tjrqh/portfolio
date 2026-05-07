@@ -33,6 +33,8 @@ export const personalInfo: PersonalInfo = {
 // Organization 레포: 'org-name/repo-name'
 // ============================================================
 export const featuredRepos: string[] = [
+  'maru',
+  'KOSTAeatTogether/FE',
   'JobHub',
   'canvas-drawing',
   'kosta-web',
