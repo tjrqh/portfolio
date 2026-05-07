@@ -33,7 +33,7 @@ export const personalInfo: PersonalInfo = {
 // Organization 레포: 'org-name/repo-name'
 // ============================================================
 export const featuredRepos: string[] = [
-  'maru',
+  'lucky-biky/maru',
   'KOSTAeatTogether/.github',
   'JobHub',
   'canvas-drawing',
@@ -76,6 +76,7 @@ export const skills: SkillCategory[] = [
 // ============================================================
 export const repoDisplayNames: Record<string, string> = {
   'KOSTAeatTogether/.github': 'eatTogether',
+  'lucky-biky/maru': 'maru',
 };
 
 // ============================================================
