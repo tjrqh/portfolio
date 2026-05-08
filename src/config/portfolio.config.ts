@@ -38,8 +38,7 @@ export const featuredRepos: string[] = [
   'JobHub',
   'canvas-drawing',
   'CalMinder',
-  'concert-ticketing/concert-ticketing-be',
-  'doodle'
+  'concert-ticketing/concert-ticketing-be'
 ];
 
 // ============================================================
