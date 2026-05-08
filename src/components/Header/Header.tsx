@@ -29,7 +29,7 @@ export default function Header() {
         {/* Logo */}
         <a href="#hero" className={styles.logo} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
           <span className={styles.logoBracket}>{'<'}</span>
-          {"I'm"+ personalInfo.nickname}
+          {"I'm "+ personalInfo.nickname}
           <span className={styles.logoBracket}>{' />'}</span>
         </a>
 
