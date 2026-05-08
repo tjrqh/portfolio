@@ -14,7 +14,7 @@ import type { PersonalInfo, SkillCategory } from '../types';
 // ============================================================
 export const personalInfo: PersonalInfo = {
   name: '김보석',
-  nickname: 'Mui(무이)', // 예: 'MUI' (선택사항)
+  nickname: 'Mui', // 예: 'MUI' (선택사항)
   githubUsername: 'tjrqh',
   tagline: '코드로 문제를 해결하는 개발자',
   description:
