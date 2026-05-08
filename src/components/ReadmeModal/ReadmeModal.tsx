@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import type { RepoWithReadme } from '../../types';
 import styles from './ReadmeModal.module.css';
 
@@ -81,7 +82,9 @@ export default function ReadmeModal({ repo, onClose }: Props) {
           {repo.readme && !repo.readmeLoading && (
             <div className={styles.markdown}>
               <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
                 urlTransform={(url) => {
+                  if (url.startsWith('http')) return url;
                   if (url.match(/\.(png|jpg|jpeg|gif|svg|webp)$/i)) {
                     return transformImageUri(url);
                   }
