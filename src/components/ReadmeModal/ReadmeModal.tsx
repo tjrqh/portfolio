@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import type { RepoWithReadme } from '../../types';
-import { personalInfo } from '../../config/portfolio.config';
 import styles from './ReadmeModal.module.css';
 
 interface Props {
@@ -24,7 +23,7 @@ export default function ReadmeModal({ repo, onClose }: Props) {
   // 상대 이미지 URL → GitHub raw URL로 변환
   const transformImageUri = (src: string) => {
     if (src.startsWith('http')) return src;
-    return `https://raw.githubusercontent.com/${personalInfo.githubUsername}/${repo.name}/HEAD/${src}`;
+    return `https://raw.githubusercontent.com/${repo.full_name}/HEAD/${src}`;
   };
 
   return (
