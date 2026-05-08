@@ -70,6 +70,7 @@ export default function About() {
               <div className={styles.terminalBody}>
                 <pre className={styles.json}>{JSON.stringify({
                   name: personalInfo.name,
+                  nickname: personalInfo.nickname,
                   github: `@${personalInfo.githubUsername}`,
                   focus: ['문제 해결', '사용자 경험', 'AI 활용'],
                   status: 'open to work 🟢',
