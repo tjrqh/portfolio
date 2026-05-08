@@ -13,6 +13,7 @@ export interface GitHubRepo {
   forks_count: number;
   language: string | null;
   updated_at: string;
+  pushed_at: string;
 }
 
 export interface RepoWithReadme extends GitHubRepo {

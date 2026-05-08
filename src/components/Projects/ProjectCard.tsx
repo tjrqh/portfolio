@@ -31,7 +31,7 @@ export default function ProjectCard({ repo, index, onReadmeClick }: Props) {
     ? repoHomepageOverrides[repo.full_name]
     : repo.homepage;
   const langColor = repo.language ? (LANG_COLORS[repo.language] ?? '#8B949E') : null;
-  const updatedAt = new Date(repo.updated_at).toLocaleDateString('ko-KR', {
+  const updatedAt = new Date(repo.pushed_at).toLocaleDateString('ko-KR', {
     year: 'numeric', month: 'long',
   });
 
