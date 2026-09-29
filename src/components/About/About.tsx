@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { personalInfo } from '../../config/portfolio.config';
+import { personalInfo, careers } from '../../config/portfolio.config';
 import styles from './About.module.css';
 
 export default function About() {
@@ -31,6 +31,23 @@ export default function About() {
                 {p}
               </p>
             ))}
+
+            {/* Career */}
+            {careers.length > 0 && (
+              <div style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+                <p className="section-label">Career</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  {careers.map((c) => (
+                    <li key={`${c.company}-${c.period}`} style={{ marginBottom: '0.75rem' }}>
+                      <strong>{c.company}</strong>
+                      <span style={{ marginLeft: '0.75rem', opacity: 0.7 }}>{c.period}</span>
+                      {c.role && <div className={styles.paragraph}>{c.role}</div>}
+                      {c.description && <div className={styles.paragraph}>{c.description}</div>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {/* Links */}
             <div className={styles.links}>
