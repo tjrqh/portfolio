@@ -41,3 +41,10 @@ export interface SkillCategory {
   icon: string;
   skills: string[];
 }
+
+export interface Career {
+  company: string;
+  period: string;
+  role?: string;
+  description?: string;
+}

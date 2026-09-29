@@ -7,7 +7,7 @@
  * ============================================================
  */
 
-import type { PersonalInfo, SkillCategory } from '../types';
+import type { PersonalInfo, SkillCategory, Career } from '../types';
 
 // ============================================================
 // 👤 개인 정보
@@ -25,6 +25,23 @@ export const personalInfo: PersonalInfo = {
   blog: undefined,        // 예: 'https://your-blog.com'
   linkedIn: undefined,    // 예: 'https://linkedin.com/in/yourname'
 };
+
+// ============================================================
+// 💼 경력
+// ============================================================
+// company: 회사/단체명
+// period: 근무 기간
+// role: 직책/역할 (선택사항)
+// description: 담당 업무 (선택사항)
+// ============================================================
+export const careers: Career[] = [
+  {
+    company: 'Aidaslabs',
+    period: '2026.06 ~ 2026.08',
+    // role: '직책/역할',
+    // description: '담당 업무',
+  },
+];
 
 // ============================================================
 // 📦 GitHub 프로젝트 레포 목록
